@@ -1,0 +1,909 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Introductie &#8212; Jupyter Book Template</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data story';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="docs/home.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jupyter Book Template</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="docs/home.html">
+                    Jupyter Book Tutorial
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="docs/notebook.html">Example Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/yenchiah/jupyter-book-template/blob/main/docs/data story.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template/issues/new?title=Issue%20on%20page%20%2Fdata story.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/data story.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introductie</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introductie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-en-preprocessing">Dataset en preprocessing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invloed-van-gezondheid-en-economie-op-de-happiness-score">Invloed van gezondheid en economie op de Happiness Score</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relatieve-verandering-gezondheid">Relatieve verandering gezondheid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relatieve-veranderingen-van-afghanistan">Relatieve veranderingen van Afghanistan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relatieve-verandering-trust-sketch">Relatieve verandering Trust (Sketch)</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introductie">
+<h1>Introductie<a class="headerlink" href="#introductie" title="Permalink to this heading">#</a></h1>
+<p>De World Happiness Score wordt elk jaar voor vele landen gemeten, deze wordt dan in een zogeheten World Happiness Report gepubliceerd. De World Happiness Score wordt aan de hand van verschillende criteria gemeten, zoals bijvoorbeeld gezondheid en welvaart, hiermee kan er een beeld geschetst worden over de wereld op het gebied van hoe blij mensen zijn met hoe het eraan toe is in het desbetreffende land. Zo hebben wij vijf World Happiness Reports verzameld over de periode van 2015 tot en met 2019, hiermee hebben we analyses gedaan waarbij we gekeken hebben van welke variabelen de World Happiness Score over het algemeen van afhangt. Hierbij is het natuurlijk ook belangrijk dat je vanuit verschillende perspectieven analyses maakt, aangezien het niet altijd zwart-wit is. Hierom hebben wij vanuit twee perspectieven analyses gemaakt. In het eerste perspectief hebben we onderzocht hoe de absolute waarde van een specifieke variabele de Happiness Score bij verschillende landen beïnvloedt, hierbij hebben we dus gekeken of er een bepaald verband is wanneer de variabele in waarde toeneemt, of dan de Happiness Score ook toeneemt. In het tweede perspectief hebben we de relatieve toename/afname van een variabele over de jaren heen onderzocht, en gekeken hoe de Happiness Score ieder jaar beïnvloedt werd door de variabele en of er een bepaald verband is.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dataset-en-preprocessing">
+<h1>Dataset en preprocessing<a class="headerlink" href="#dataset-en-preprocessing" title="Permalink to this heading">#</a></h1>
+<p>Wij hebben vijf datasets gebruikt, ieder dataset bevat informatie over de World Happiness binnen de periode 2015-2019. Al deze datasets kunnen gedownload worden op de volgende site: <a class="reference external" href="https://www.kaggle.com/datasets/unsdsn/world-happiness">https://www.kaggle.com/datasets/unsdsn/world-happiness</a>. Elke dataset bevat min of meer dezelfde variabelen: <strong>Country</strong>, <strong>Region</strong>, <strong>Happiness Rank</strong>, <strong>Happiness Score</strong>, <strong>Standard Error</strong>, <strong>Economy (GDP per Capita)</strong>, <strong>Family</strong>, <strong>Health (Life Expectancy)</strong>, <strong>Freedom</strong>, <strong>Trust (Government Corruption)</strong>, <strong>Generosity</strong> en <strong>Dystopia Residual</strong>. Deze vijf datasets wilden we samenvoegen in één dataset, die ook opgeschoond is, dat vereiste nogal wat preprocessing. Dit komt omdat de dataset van 2017 qua betekenis dezelfde variabelen had als de dataset van 2015, alleen de benaming was iets anders, ook had het een aantal extra variabelen die niet relevant waren voor onze analyses en ook niet in de dataset van 2015 voorkwamen, dit gold ook voor de dataset van 2016. We hadden de dataset van 2015 als referentie gebruikt, omdat dit de meest schone dataset was qua relevantie en benaming van de variabelen. De datasets van 2018 en 2019 vereisten ook wat preprocessing, omdat de variabelen hier ook een net andere benaming hadden, ook ontbrak hier de “Dystopia Residual” variabele. Nu wisten we welke variabelen we willen behouden, welke we niet wilden en hoe we de datasets moesten opschonen. Als eerst hebben we de variabelen die we niet wilden gebruiken uit de dataset gehaald, voor de dataset van 2015 waren dit de variabelen “Region” en “Standard Error”, van 2016 de variabelen “Region”,”Lower Confidence Interval” en “Upper Confidence Interval” en van 2017 de variabelen “Whisker.high” en “Whisker.low”. Voor de datasets van 2018 en 2019 hebben we geen variabelen weggehaald. Hierna hebben we de benaming van de variabelen aangepast, zodat het overeenkwam met de benaming zoals weergegeven in de dataset van 2015, zo hebben we bijvoorbeeld de variabele “Happiness.Rank” uit de dataset van 2017 veranderd naar “Happiness Rank”. Ditzelfde hebben we gedaan voor de datasets van 2018 en 2019. We hadden hierna opgemerkt dat de volgorde van de variabelen in de datasets van 2015, 2016 en 2017 overeenkwamen, maar in die van 2018 en 2019 niet, dus we hadden de volgorde van de kolommen in de datasets van 2018 en 2019 aangepast zodat het overeenkwam met de overige datasets. Dit was nodig zodat de volgende stap makkelijker verloopt, het samenvoegen van de datasets. Nu we de datasets hebben samengevoegd, zagen we dat er in de kolom “Dystopia Residual” missing values voorkwamen, dit kwam omdat de datasets van 2018 en 2019 geen informatie hadden over deze kolom. We hebben dit probleem opgelost door de gemiddelde van de voorgaande jaren te nemen per land, en vervolgens de missing values van het desbetreffende land te vervangen met de gemiddelde over de jaren heen waar er wel informatie over was. Ten slotte hebben we nog een “Year” kolom toegevoegd aan onze samengevoegde dataset, deze variabele was nodig om bepaalde visualisaties te kunnen maken. Nu was onze dataset klaar en hebben we 11 variabelen die we kunnen gebruiken om visualisaties te maken: <strong>Country</strong>, <strong>Happiness Rank</strong>, <strong>Happiness Score</strong>, <strong>Economy (GDP per Capita)</strong>, <strong>Family</strong>, <strong>Health (Life Expectancy)</strong>, <strong>Freedom</strong>, <strong>Trust (Government Corruption)</strong>, <strong>Generosity</strong>, <strong>Dystopia Residual</strong> en <strong>Year</strong>.</p>
+<section id="invloed-van-gezondheid-en-economie-op-de-happiness-score">
+<h2>Invloed van gezondheid en economie op de Happiness Score<a class="headerlink" href="#invloed-van-gezondheid-en-economie-op-de-happiness-score" title="Permalink to this heading">#</a></h2>
+<p>De economie kan een groot invloed hebben op de Happiness Score van landen. In de onderstaande grafiek kunnen we per land zien hoe de evolutie van de economie is, en hoe dit de Happiness Score van het land beïnvloedt. Er valt een interessant patroon op te merken, over het algemeen lijken de punten op de grafiek een opwaartse trent te hebben naarmate de economie van een land verbetert. Dit kan erop wijzen dat als de economie van een land verbetert, dat de Happiness Score van het land ook verbetert.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;cleaned_data.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">])</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Economy (GDP per Capita)&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Happiness Score&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span>
+    <span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;De invloed van de economie op de Happiness Score&quot;</span><span class="p">,</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&quot;Economy (GDP per Capita)&quot;</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&quot;Happiness Score&quot;</span><span class="p">,</span>
+    <span class="n">annotations</span><span class="o">=</span><span class="p">[</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=-</span><span class="mf">0.2</span><span class="p">,</span>
+        <span class="n">showarrow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Op de x-as is de Economy variabele weergegeven, een grotere waarde betekent dat de economie verbetert.</span><span class="se">\</span>
+<span class="s2">        &lt;br&gt; Op de y-as is de Happiness Score weergegeven, dit geeft aan hoe blij mensen zijn. Uit de grafiek kan per land afgelezen worden hoezeer de Economy variabele de Happiness Score beïnvloedt.&quot;</span><span class="p">,</span>
+        <span class="n">xref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span>
+        <span class="n">yref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span>
+        <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;cleaned_data.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Economy (GDP per Capita)&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Happiness Score&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;De invloed van de economie op de Happiness Score&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&quot;Economy (GDP per Capita)&quot;</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/io/parsers/readers.py:912,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
+<span class="g g-Whitespace">    </span><span class="mi">899</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">900</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">901</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">908</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">909</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">910</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">912</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/io/parsers/readers.py:577,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">574</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">576</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">577</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">579</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">580</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File ~/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/io/parsers/readers.py:1407,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1404</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1406</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1407</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/io/parsers/readers.py:1661,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1659</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1660</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1661</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1662</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1663</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1664</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1665</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1666</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1667</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1668</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1669</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1670</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1671</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1672</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File ~/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/io/common.py:859,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">854</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">855</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
+<span class="g g-Whitespace">    </span><span class="mi">856</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">857</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">858</span>         <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">859</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">860</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">861</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">862</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">863</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">864</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">866</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">867</span>         <span class="c1"># Binary mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">868</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;cleaned_data.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Low&#39;</span><span class="p">,</span> <span class="s1">&#39;Below Average&#39;</span><span class="p">,</span> <span class="s1">&#39;Average&#39;</span><span class="p">,</span> <span class="s1">&#39;Above Average&#39;</span><span class="p">,</span> <span class="s1">&#39;High&#39;</span><span class="p">]</span>
+<span class="n">cut_quantized</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happiness Score&#39;</span><span class="p">],</span> <span class="n">q</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+<span class="n">health_quantized</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Health (Life Expectancy)&#39;</span><span class="p">],</span> <span class="n">q</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+<span class="n">economy_quantized</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Economy (GDP per Capita)&#39;</span><span class="p">],</span> <span class="n">q</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+
+<span class="n">parcats_data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Parcats</span><span class="p">(</span>
+        <span class="n">dimensions</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Happiness Score&#39;</span><span class="p">,</span> <span class="s1">&#39;values&#39;</span><span class="p">:</span> <span class="n">cut_quantized</span><span class="p">,</span> <span class="s1">&#39;categoryorder&#39;</span><span class="p">:</span> <span class="s1">&#39;array&#39;</span><span class="p">,</span> <span class="s1">&#39;categoryarray&#39;</span><span class="p">:</span> <span class="n">labels</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Health (Life Expectancy)&#39;</span><span class="p">,</span> <span class="s1">&#39;values&#39;</span><span class="p">:</span> <span class="n">health_quantized</span><span class="p">,</span> <span class="s1">&#39;categoryorder&#39;</span><span class="p">:</span> <span class="s1">&#39;array&#39;</span><span class="p">,</span> <span class="s1">&#39;categoryarray&#39;</span><span class="p">:</span> <span class="n">labels</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Economy (GDP per Capita)&#39;</span><span class="p">,</span> <span class="s1">&#39;values&#39;</span><span class="p">:</span> <span class="n">economy_quantized</span><span class="p">,</span> <span class="s1">&#39;categoryorder&#39;</span><span class="p">:</span> <span class="s1">&#39;array&#39;</span><span class="p">,</span> <span class="s1">&#39;categoryarray&#39;</span><span class="p">:</span> <span class="n">labels</span><span class="p">}</span>
+        <span class="p">],</span>
+        <span class="n">line</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="n">cut_quantized</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span><span class="p">,</span> <span class="s1">&#39;colorscale&#39;</span><span class="p">:</span> <span class="s1">&#39;darkmint&#39;</span><span class="p">},</span>
+    <span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Parallel Categories Plot of Happiness Score, Health (Life Expectancy), and Economy (GDP per Capita)&#39;</span><span class="p">,</span>
+    <span class="n">margin_b</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+    <span class="n">annotations</span> <span class="o">=</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">xref</span><span class="o">=</span><span class="s1">&#39;paper&#39;</span><span class="p">,</span>
+                        <span class="n">yref</span><span class="o">=</span><span class="s1">&#39;paper&#39;</span><span class="p">,</span>
+                        <span class="n">x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">y</span><span class="o">=-</span><span class="mf">0.25</span><span class="p">,</span>
+                        <span class="n">showarrow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Voor alle variabelen geldt dat ze gequantiseerd zijn in 5 categorieën. Hoe donkerder de kleur, hoe hoger de waarde. &lt;br&gt;Voor de variabele Health en Economy is af te lezen welk deel van de categorieën bestaat uit een bepaalde Happiness Score categorie.&#39;</span><span class="p">)])</span>
+
+<span class="n">fig_parcats</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">parcats_data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+<span class="n">fig_parcats</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="68135a0d-cfd3-40e0-9af4-b4e996aef85d" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("68135a0d-cfd3-40e0-9af4-b4e996aef85d")) {                    Plotly.newPlot(                        "68135a0d-cfd3-40e0-9af4-b4e996aef85d",                        [{"dimensions":[{"categoryarray":["Low","Below Average","Average","Above Average","High"],"categoryorder":"array","label":"Happiness Score","values":["Low","Low","Low","Low","Low","Below Average","Below Average","Below Average","Below Average","Below Average","Average","Above Average","Above Average","Average","Average","Low","Low","Low","Low","High","High","High","Above Average","Above Average","Low","Below Average","Below Average","Low","Below Average","High","High","High","High","High","High","High","High","High","High","Average","Average","Average","Average","Average","Above Average","Above Average","Above Average","Above Average","Above Average","Below Average","Below Average","Below Average","Below Average","Below Average","Above Average","Above Average","Average","Average","Average","High","High","High","High","High","Above Average","Above Average","Above Average","Low","Low","Low","Low","Below Average","Average","Average","Below Average","Average","Average","Above Average","Above Average","Above Average","Above Average","Above Average","Below Average","Average","Average","Average","Average","Low","Low","Low","Low","Low","High","High","High","High","Above Average","Low","Low","Below Average","Below Average","Below Average","Low","Low","Low","Below Average","Below Average","Low","Low","Low","Low","Low","Low","Low","Low","Below Average","Below Average","Low","Below Average","Below Average","Below Average","Below Average","High","High","High","High","High","Low","Low","Low","Low","Low","Low","Low","Low","Low","High","High","High","High","High","Average","Average","Average","Average","Average","High","High","Above Average","Above Average","Above Average","Low","Low","Low","Low","Low","Low","Below Average","Below Average","Below Average","Low","Low","Low","Below Average","High","High","High","High","High","Above Average","Average","Average","Average","Average","Average","Average","Average","Above Average","Above Average","High","High","High","High","High","High","High","High","High","High","Below Average","Below Average","Average","Average","Average","Average","Above Average","Above Average","Above Average","Above Average","Above Average","Low","Below Average","Below Average","Below Average","Low","Above Average","Above Average","Above Average","Above Average","Above Average","Average","Average","Average","Average","Above Average","Below Average","Below Average","Below Average","Low","Low","High","High","High","High","High","High","High","High","High","High","Low","Low","Below Average","Below Average","Below Average","Below Average","Low","Low","Low","Low","Below Average","High","High","High","High","High","Below Average","Low","Low","Below Average","Below Average","Below Average","Below Average","Average","Average","Average","Above Average","Above Average","High","Above Average","High","Low","Low","Low","Low","Below Average","Below Average","Low","Low","Low","Low","Below Average","Below Average","Average","Average","Above Average","Average","Average","Average","Average","Average","Below Average","Average","Average","Average","Above Average","High","High","High","High","High","Below Average","Below Average","Low","Low","Low","Average","Average","Average","Average","Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","High","High","High","High","High","High","High","High","High","High","Above Average","Above Average","Above Average","Above Average","Above Average","Low","Low","Low","Below Average","Below Average","Average","Average","Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Average","Average","Average","Average","Below Average","Above Average","Above Average","Above Average","Above Average","Above Average","Below Average","Low","Below Average","Below Average","Below Average","Average","Average","Average","Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Average","Average","Below Average","Average","Average","Below Average","Below Average","Below Average","Below Average","Average","Average","Above Average","Above Average","Above Average","Below Average","Average","Average","Average","Average","Below Average","Low","Low","Low","Below Average","Low","Low","Low","Low","Above Average","Average","Average","Average","Average","Above Average","Above Average","Above Average","Above Average","Above Average","High","High","High","High","High","Below Average","Average","Average","Average","Low","Low","Low","Low","Low","Low","Low","Low","Low","Low","Above Average","Above Average","Above Average","Above Average","Average","Low","Low","Low","Below Average","Below Average","Above Average","High","High","High","High","Below Average","Low","Low","Low","Below Average","Average","Average","Average","Above Average","Above Average","High","High","High","High","High","Above Average","Above Average","Above Average","Average","Average","Below Average","Below Average","Below Average","Average","Average","Average","Average","Average","Average","Average","Below Average","Average","Average","Average","Average","Below Average","Below Average","Below Average","Below Average","Low","Below Average","Below Average","Low","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","High","High","High","High","High","High","High","High","High","High","Above Average","Above Average","Above Average","Above Average","Above Average","Low","Low","Low","Low","Below Average","Average","Below Average","Below Average","Average","Average","Average","Above Average","Above Average","Average","Above Average","Average","High","High","High","High","High","High","Average","Average","Average","Average","Average","Below Average","Below Average","Below Average","Below Average","Below Average","High","High","High","High","Above Average","Above Average","Average","Average","Average","Average","Above Average","Average","Average","Average","Average","Below Average","Average","Average","Average","Average","Above Average","Above Average","Above Average","Above Average","Above Average","Average","Average","Average","Average","Average","High","High","Above Average","Above Average","Above Average","Above Average","Average","Average","Above Average","Above Average","Above Average","Average","Above Average","Above Average","Above Average","Average","Low","Low","Low","Low","Low","High","Above Average","Above Average","Above Average","Above Average","Low","Low","Below Average","Below Average","Below Average","Average","Average","Average","Average","Average","Below Average","Below Average","Below Average","Below Average","Below Average","High","High","High","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Average","Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Above Average","Above Average","Above Average","Above Average","Above Average","Low","Low","Low","Low","Above Average","Above Average","High","Above Average","Above Average","Low","Below Average","Below Average","Below Average","Below Average","Below Average","Low","Low","Low","Above Average","Above Average","Below Average","Low","High","High","High","High","High","High","High","High","High","High","Low","Low","Low","Low","Low","Above Average","Above Average","High","High","High","Below Average","Below Average","Below Average","Average","Average","Low","Low","Low","Low","Low","High","High","High","Above Average","Above Average","Low","Low","Low","Low","Low","Above Average","Above Average","Above Average","Above Average","Above Average","Below Average","Below Average","Below Average","Below Average","Below Average","Average","Average","Average","Average","Average","Average","Average","Above Average","Average","Average","Low","Low","Low","Low","Low","Below Average","Low","Low","Low","Low","High","High","High","High","High","High","High","High","High","High","High","High","High","High","High","High","High","High","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","High","Above Average","Average","Below Average","Below Average","Average","Below Average","Below Average","Average","Average","Low","Low","Low","Low","Low","Average","Below Average","Below Average","Below Average","Low","Below Average","Low","Low","Low","Low"]},{"categoryarray":["Low","Below Average","Average","Above Average","High"],"categoryorder":"array","label":"Health (Life Expectancy)","values":["Low","Low","Low","Low","Low","Above Average","Above Average","Above Average","Above Average","High","Average","Average","Average","Average","Above Average","Low","Low","Low","Low","Above Average","Average","Average","Above Average","High","Above Average","Average","Average","Average","Above Average","High","High","High","High","High","High","Above Average","Above Average","High","High","Average","Below Average","Below Average","Average","Above Average","Above Average","Average","Average","Average","High","Average","Below Average","Below Average","Below Average","Above Average","Above Average","Average","Average","Average","Above Average","High","Above Average","Above Average","High","High","Below Average","Below Average","Below Average","Low","Low","Low","Low","Below Average","Below Average","Below Average","Below Average","Below Average","Average","Below Average","Below Average","Below Average","Below Average","Average","Above Average","Average","Average","Above Average","High","Low","Low","Low","Below Average","Below Average","Average","Average","Average","Average","Above Average","Above Average","Average","Average","Above Average","Above Average","Low","Low","Low","Low","Below Average","Low","Low","Low","Low","Below Average","Average","Below Average","Below Average","Below Average","Average","Low","Low","Low","Low","Low","High","Above Average","High","High","High","Low","Low","Low","Low","Low","Low","Low","Low","Low","High","Above Average","Above Average","Above Average","High","Above Average","Above Average","Above Average","Above Average","High","Average","Average","Below Average","Average","High","Low","Low","Below Average","Low","Low","Low","Low","Below Average","Low","Low","Low","Low","Low","High","Above Average","Above Average","Above Average","High","Above Average","Average","Average","Above Average","High","High","High","High","High","High","High","Above Average","Above Average","High","High","High","Above Average","Above Average","High","High","Low","Average","Below Average","Below Average","Average","Above Average","Above Average","Average","Average","Above Average","High","Average","Below Average","Below Average","Below Average","Average","Average","Below Average","Average","Average","Above Average","Above Average","Average","Average","Above Average","High","Below Average","Low","Low","Below Average","Below Average","High","Above Average","Above Average","High","High","High","High","High","High","High","Below Average","Low","Low","Below Average","Below Average","Below Average","Above Average","Average","Average","Average","Above Average","High","Above Average","Above Average","High","High","Below Average","Low","Low","Low","Below Average","High","Above Average","Above Average","High","High","Average","Below Average","Below Average","Average","Above Average","Low","Low","Low","Low","Low","Below Average","Low","Low","Low","Below Average","Average","Below Average","Below Average","Average","Above Average","High","High","High","High","High","Above Average","Average","Average","Above Average","Above Average","High","High","High","High","High","Below Average","Below Average","Below Average","Below Average","Below Average","Average","Below Average","Below Average","Below Average","Average","Average","Average","Average","Average","Above Average","Average","Below Average","Below Average","Below Average","Below Average","High","Above Average","Above Average","High","High","High","High","High","High","High","High","High","High","High","High","Low","Low","Low","Low","Low","Average","Below Average","Average","Average","High","High","High","High","High","High","Average","Average","Average","Average","Above Average","Average","Below Average","Average","Average","Above Average","Below Average","Low","Low","Below Average","Below Average","Average","Below Average","Below Average","Below Average","Above Average","Above Average","Average","Average","Average","Above Average","Average","Below Average","Below Average","Below Average","Above Average","Below Average","Below Average","Below Average","Below Average","Above Average","Average","Average","Average","Above Average","High","Above Average","Above Average","Above Average","Above Average","Low","Low","Low","Low","Low","Low","Low","Low","Below Average","Average","Below Average","Below Average","Below Average","Average","Above Average","Average","Average","Above Average","Above Average","High","High","High","High","High","Above Average","Average","Average","Average","Below Average","Low","Below Average","Below Average","Below Average","Low","Low","Low","Low","Below Average","Above Average","Average","Average","Average","Above Average","Low","Low","Low","Low","Low","High","Above Average","Above Average","High","High","Low","Low","Low","Low","Below Average","Above Average","Average","Average","Average","Above Average","Above Average","Above Average","Above Average","Above Average","High","Average","Below Average","Below Average","Average","Above Average","Average","Below Average","Below Average","Below Average","Average","Above Average","Average","Average","Above Average","High","Average","Below Average","Average","Average","Above Average","Low","Low","Low","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Low","Low","Low","Below Average","Below Average","Below Average","Below Average","Below Average","Average","High","Above Average","Above Average","High","High","High","High","Above Average","High","High","Above Average","Average","Average","Average","High","Low","Low","Low","Low","Low","Low","Low","Low","Low","Low","High","High","High","High","High","High","High","Above Average","Above Average","High","High","Above Average","Below Average","Below Average","Below Average","Below Average","Below Average","Average","Below Average","Below Average","Average","Average","Above Average","Above Average","Average","Above Average","High","Average","Below Average","Below Average","Average","Above Average","Above Average","Average","Average","Average","High","Below Average","Below Average","Below Average","Below Average","Average","Above Average","Average","Average","Above Average","High","High","Above Average","Above Average","High","High","Above Average","Above Average","Above Average","Above Average","Above Average","High","Above Average","Average","Average","Above Average","Above Average","Average","Below Average","Below Average","Average","Above Average","Below Average","Low","Low","Below Average","Average","Above Average","Below Average","Below Average","Average","Above Average","Below Average","Below Average","Below Average","Below Average","Below Average","Above Average","Average","Average","Average","High","Low","Low","Low","Low","Low","High","High","High","High","High","Above Average","Average","Above Average","Above Average","High","High","Above Average","Above Average","High","High","Low","Low","Low","Low","Low","Below Average","Low","Low","Low","Low","Below Average","High","High","High","High","High","Low","Low","Low","Low","High","High","High","High","High","Average","Average","Average","Average","High","Low","Low","Low","Low","Average","Below Average","Low","Low","High","High","Above Average","High","High","High","High","High","High","High","Above Average","Average","Below Average","Below Average","Below Average","High","Above Average","High","High","Above Average","Below Average","Below Average","Below Average","Average","Above Average","Below Average","Low","Low","Below Average","Below Average","Above Average","Average","Average","Average","Above Average","Low","Low","Low","Low","Below Average","Below Average","Above Average","Average","Below Average","Below Average","Above Average","Below Average","Average","Average","Above Average","Above Average","Average","Average","Average","Above Average","Below Average","Below Average","Below Average","Below Average","Average","Low","Low","Low","Low","Below Average","Average","Below Average","Below Average","Average","Above Average","Above Average","Above Average","Above Average","Average","Above Average","High","Above Average","Above Average","High","High","High","Above Average","Above Average","Above Average","High","Above Average","Above Average","Above Average","Above Average","High","Average","Below Average","Below Average","Average","Above Average","Above Average","Average","Average","Average","Above Average","Above Average","Average","Average","Average","High","Below Average","Low","Low","Low","Below Average","Low","Low","Low","Low","Below Average","Low","Low","Low","Low","Below Average"]},{"categoryarray":["Low","Below Average","Average","Above Average","High"],"categoryorder":"array","label":"Economy (GDP per Capita)","values":["Low","Low","Low","Low","Low","Average","Average","Average","Average","Average","Average","Average","Above Average","Average","Average","Below Average","Below Average","Average","Below Average","Average","Above Average","Above Average","Above Average","Above Average","Below Average","Average","Average","Below Average","Below Average","High","High","High","High","High","High","High","High","High","High","Average","Above Average","Above Average","Average","Average","High","High","High","High","High","Low","Below Average","Below Average","Below Average","Below Average","Average","Above Average","Above Average","Average","Average","High","High","High","High","High","Average","Average","Below Average","Low","Low","Low","Low","Low","Below Average","Below Average","Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Average","Average","Average","Average","Average","Above Average","Above Average","Average","Average","Average","Above Average","Above Average","Average","Average","Average","Above Average","Above Average","Average","Above Average","Low","Low","Low","Low","Low","Low","Low","Low","Low","Low","Low","Below Average","Below Average","Below Average","Below Average","Low","Below Average","Below Average","Below Average","Below Average","High","High","High","High","High","Low","Low","Low","Low","Low","Low","Low","Low","Low","Above Average","Above Average","Above Average","Above Average","Above Average","Average","Average","Above Average","Average","Average","Average","Average","Average","Average","Average","Low","Low","Low","Below Average","Below Average","Below Average","Below Average","Below Average","Low","Low","Low","Low","Low","Average","Average","Above Average","Average","Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","High","High","Above Average","Above Average","Above Average","High","High","Above Average","Above Average","High","High","High","High","High","Low","Average","Average","Above Average","Average","Average","Average","Average","Average","Average","Average","Average","Average","Average","Average","Average","Below Average","Average","Average","Below Average","Below Average","Above Average","Above Average","High","Above Average","Above Average","Low","Low","Low","Low","Low","Above Average","High","High","High","High","Above Average","High","High","High","High","Average","Above Average","Above Average","Average","Average","Low","Below Average","Below Average","Average","Below Average","Average","High","High","High","High","High","Below Average","Below Average","Below Average","Below Average","Below Average","Above Average","Above Average","Above Average","Above Average","Above Average","Below Average","Below Average","Average","Below Average","Below Average","Low","Low","Low","Low","Low","Low","Low","Low","Low","Low","Below Average","Below Average","Below Average","Below Average","Below Average","High","High","High","High","High","Above Average","Above Average","Above Average","Above Average","Above Average","High","High","High","High","High","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Average","Average","Average","Average","Average","Above Average","Above Average","Average","Above Average","Average","Above Average","Above Average","Average","Average","High","High","High","High","High","Above Average","High","High","High","Above Average","Above Average","High","High","Above Average","High","Low","Below Average","Below Average","Below Average","Below Average","Below Average","Average","Average","Below Average","Below Average","Above Average","High","High","High","High","Average","Average","Average","Below Average","Below Average","Above Average","Above Average","Above Average","Above Average","Above Average","Low","Below Average","Below Average","Low","Low","Below Average","Average","Average","Below Average","Average","High","High","High","High","High","Low","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Above Average","Above Average","Above Average","Above Average","Above Average","Average","Above Average","Above Average","Average","Average","Low","Low","Low","Low","Low","Low","Low","Low","Low","Above Average","Average","Above Average","Average","Average","Above Average","Above Average","High","Above Average","Above Average","High","High","High","High","High","Average","Average","Average","Average","Low","Low","Low","Low","Low","Low","Low","Low","Low","Low","Above Average","Above Average","Above Average","Above Average","Above Average","Low","Low","Low","Low","Low","Above Average","High","High","Above Average","High","Low","Below Average","Below Average","Below Average","Below Average","Average","Above Average","Above Average","Above Average","Above Average","Average","Above Average","Above Average","Average","Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Average","Average","Average","Average","Average","Above Average","Above Average","Average","Average","Below Average","Below Average","Average","Below Average","Below Average","Low","Low","Low","Low","Low","Low","Low","Below Average","Below Average","Average","Average","Average","Average","Low","Low","Low","Low","Low","High","High","High","High","High","Above Average","High","High","Above Average","High","Below Average","Below Average","Below Average","Below Average","Below Average","Low","Low","Low","Low","Low","Below Average","Below Average","Below Average","Below Average","Below Average","Above Average","High","High","Average","Above Average","Above Average","High","High","High","High","High","High","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Average","Above Average","Above Average","Above Average","Above Average","Below Average","Average","Average","Below Average","Below Average","Average","Average","Average","Average","Average","Below Average","Below Average","Average","Below Average","Below Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","High","Above Average","Above Average","High","High","High","High","High","High","Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Above Average","Low","Low","Low","Low","Low","High","High","High","High","High","Low","Low","Low","Low","Low","Average","Average","Average","Average","Average","Low","Low","Low","Low","Low","High","High","High","High","High","Above Average","Above Average","High","Above Average","Above Average","Above Average","High","High","Above Average","Above Average","Low","Low","Low","Low","Low","Low","Average","Average","Average","Average","Average","Above Average","High","High","Above Average","High","Low","Low","Low","Low","Above Average","High","High","Above Average","Above Average","Below Average","Average","Average","Average","Average","Low","Below Average","Below Average","Below Average","Average","Above Average","Below Average","Below Average","High","High","High","High","High","High","High","High","High","High","Below Average","Below Average","Below Average","Below Average","Below Average","Above Average","High","High","High","High","Low","Low","Below Average","Low","Low","Low","Low","Low","Low","Low","Average","Above Average","Above Average","Average","Average","Low","Low","Low","Low","Low","Above Average","Above Average","Above Average","High","High","Average","Average","Average","Average","Average","Average","Above Average","Above Average","Above Average","Above Average","Average","Above Average","Above Average","Average","Average","Low","Low","Low","Low","Low","Below Average","Average","Average","Below Average","Below Average","High","High","High","High","High","Above Average","High","High","Above Average","High","High","High","High","High","High","Average","Above Average","Above Average","Above Average","Above Average","Below Average","Below Average","Below Average","Below Average","Below Average","Average","Above Average","Above Average","Average","Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Below Average","Low","Low","Low","Below Average","Below Average","Below Average","Below Average","Low","Low","Low","Low","Low"]}],"line":{"color":[0,0,0,0,0,1,1,1,1,1,2,3,3,2,2,0,0,0,0,4,4,4,3,3,0,1,1,0,1,4,4,4,4,4,4,4,4,4,4,2,2,2,2,2,3,3,3,3,3,1,1,1,1,1,3,3,2,2,2,4,4,4,4,4,3,3,3,0,0,0,0,1,2,2,1,2,2,3,3,3,3,3,1,2,2,2,2,0,0,0,0,0,4,4,4,4,3,0,0,1,1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,4,4,4,4,4,0,0,0,0,0,0,0,0,0,4,4,4,4,4,2,2,2,2,2,4,4,3,3,3,0,0,0,0,0,0,1,1,1,0,0,0,1,4,4,4,4,4,3,2,2,2,2,2,2,2,3,3,4,4,4,4,4,4,4,4,4,4,1,1,2,2,2,2,3,3,3,3,3,0,1,1,1,0,3,3,3,3,3,2,2,2,2,3,1,1,1,0,0,4,4,4,4,4,4,4,4,4,4,0,0,1,1,1,1,0,0,0,0,1,4,4,4,4,4,1,0,0,1,1,1,1,2,2,2,3,3,4,3,4,0,0,0,0,1,1,0,0,0,0,1,1,2,2,3,2,2,2,2,2,1,2,2,2,3,4,4,4,4,4,1,1,0,0,0,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,0,0,0,1,1,2,2,2,3,3,3,3,3,3,3,2,2,2,2,1,3,3,3,3,3,1,0,1,1,1,2,2,2,2,3,3,3,3,3,3,2,2,1,2,2,1,1,1,1,2,2,3,3,3,1,2,2,2,2,1,0,0,0,1,0,0,0,0,3,2,2,2,2,3,3,3,3,3,4,4,4,4,4,1,2,2,2,0,0,0,0,0,0,0,0,0,0,3,3,3,3,2,0,0,0,1,1,3,4,4,4,4,1,0,0,0,1,2,2,2,3,3,4,4,4,4,4,3,3,3,2,2,1,1,1,2,2,2,2,2,2,2,1,2,2,2,2,1,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,0,0,0,0,1,2,1,1,2,2,2,3,3,2,3,2,4,4,4,4,4,4,2,2,2,2,2,1,1,1,1,1,4,4,4,4,3,3,2,2,2,2,3,2,2,2,2,1,2,2,2,2,3,3,3,3,3,2,2,2,2,2,4,4,3,3,3,3,2,2,3,3,3,2,3,3,3,2,0,0,0,0,0,4,3,3,3,3,0,0,1,1,1,2,2,2,2,2,1,1,1,1,1,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,2,2,1,1,1,1,1,1,1,1,1,3,3,3,3,3,0,0,0,0,3,3,4,3,3,0,1,1,1,1,1,0,0,0,3,3,1,0,4,4,4,4,4,4,4,4,4,4,0,0,0,0,0,3,3,4,4,4,1,1,1,2,2,0,0,0,0,0,4,4,4,3,3,0,0,0,0,0,3,3,3,3,3,1,1,1,1,1,2,2,2,2,2,2,2,3,2,2,0,0,0,0,0,1,0,0,0,0,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,4,3,2,1,1,2,1,1,2,2,0,0,0,0,0,2,1,1,1,0,1,0,0,0,0],"colorscale":[[0.0,"rgb(210, 251, 212)"],[0.16666666666666666,"rgb(165, 219, 194)"],[0.3333333333333333,"rgb(123, 188, 176)"],[0.5,"rgb(85, 156, 158)"],[0.6666666666666666,"rgb(58, 124, 137)"],[0.8333333333333334,"rgb(35, 93, 114)"],[1.0,"rgb(18, 63, 90)"]]},"type":"parcats"}],                        {"annotations":[{"showarrow":false,"text":"Voor alle variabelen geldt dat ze gequantiseerd zijn in 5 categorie\u00ebn. Hoe donkerder de kleur, hoe hoger de waarde. \u003cbr\u003eVoor de variabele Health en Economy is af te lezen welk deel van de categorie\u00ebn bestaat uit een bepaalde Happiness Score categorie.","x":0.5,"xref":"paper","y":-0.25,"yref":"paper"}],"margin":{"b":90},"title":{"text":"Parallel Categories Plot of Happiness Score, Health (Life Expectancy), and Economy (GDP per Capita)"},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('68135a0d-cfd3-40e0-9af4-b4e996aef85d');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<p>Uit de plot hierboven blijkt dat Health en Economy beide nauwverwant zijn aan de Happiness Score. Voor alle categorieën van de Health en Economy variabele geldt dat het overgrote deel van een categorie een Happiness Score heeft in dezelfde categorie of dat deze maar één categorie afwijkt. Hieruit blijkt dus dat er een verband zit tussen Happiness Score en Health en tussen Happiness Score en Economy.</p>
+</section>
+<section id="relatieve-verandering-gezondheid">
+<h2>Relatieve verandering gezondheid<a class="headerlink" href="#relatieve-verandering-gezondheid" title="Permalink to this heading">#</a></h2>
+<p>De gezondheid kan ook een rol spelen bij de Happiness Score van een land. In de figuur hieronder zijn er twee heatmaps te zien, waarbij de eerste heatmap de verschillende metingen van de gezondheid per land en per jaar laat zien, hiermee kan de relatieve verandering van de gezondheid over de jaren heen afgelezen worden. De tweede heatmap laat de verschillende metingen van de Happiness Score per land en per jaar zien, waarmee eveneens de relatieve verandering over de jaren heen afgelezen kan worden. Als we bijvoorbeeld naar Afghanistan kijken, dan zien we dat in 2016 de gezondheidsscore afgenomen is, en ook de Happiness Score afgenomen is. Echter als we naar Azerbaijan kijken, dan zien we dat in 2016 de gezondheidsscore afgenomen is, maar de Happiness Score is toegenomen. Het hoeft dus niet zo te zijn dat als de gezondheidsscore toeneemt, dat dan de Happiness Score ook toeneemt, de Happiness Score kan afhangen van meerdere variabelen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
+
+<span class="n">rel1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span><span class="n">values</span><span class="o">=</span><span class="s1">&#39;Health (Life Expectancy)&#39;</span><span class="p">)</span>
+<span class="n">rel2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span><span class="n">values</span><span class="o">=</span><span class="s1">&#39;Happiness Score&#39;</span><span class="p">)</span>
+
+<span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">42</span><span class="p">),</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">rel1</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">rel2</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Relative verandering van de Health variabele&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Relative verandering van de Happiness Score&#39;</span><span class="p">)</span>
+
+<span class="n">caption</span><span class="o">=</span><span class="s1">&#39;Op de x-as van beide heatmaps staan de jaren van de metingen weergegeven. </span><span class="se">\n</span><span class="s1"> Op de y-as van beide heatmaps staan alle landen. </span><span class="se">\n</span><span class="s1"> De kleurenbalk van de linker heatmap geeft de Health variabele aan, aangegeven met verschillende kleuren afhankelijk van hoe groot de waarde van de variabele is. </span><span class="se">\n</span><span class="s1"> De kleurenbalk van de rechter heatmap geeft de Happiness Score aan, aangegeven met verschillende kleuren afhankelijk van hoe groot de waarde van de variabele is. </span><span class="se">\n</span><span class="s1"> De relatieve verandering van de Health variabele kan met de linker heatmap bepaald worden, </span><span class="se">\n</span><span class="s1"> en vergeleken worden met de relatieve verandering van de Happiness Score in de rechter heatmap. </span><span class="se">\n</span><span class="s1"> Zo kan het verband tussen de variabelen direct vergeleken worden.&#39;</span>
+<span class="n">f</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.08</span><span class="p">,</span> <span class="n">caption</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax1</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/c2e5a21d33fd8a1a7fc15d8d7d4721a100c1c6e7a050c16e3ef46161411d3ebc.png" src="_images/c2e5a21d33fd8a1a7fc15d8d7d4721a100c1c6e7a050c16e3ef46161411d3ebc.png" />
+</div>
+</div>
+</section>
+<section id="relatieve-veranderingen-van-afghanistan">
+<h2>Relatieve veranderingen van Afghanistan<a class="headerlink" href="#relatieve-veranderingen-van-afghanistan" title="Permalink to this heading">#</a></h2>
+<p>In de onderstaande grafiek zijn per jaar alle waarden van Afghanistan laten zien. Als voorbeeld nemen we Family. Door steeds te kijken naar het relatieve verschil tussen twee achtereenvolgende jaren, is te zien dat Family in dezelfde jaren stijgt en daalt als de Happiness Score. Dit kan erop wijzen dat Family invloed heeft op de uiteindelijke Happiness Score.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)[</span><span class="s2">&quot;Year&quot;</span><span class="p">]</span>
+<span class="n">generosity</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)[</span><span class="s2">&quot;Generosity&quot;</span><span class="p">]</span>
+<span class="n">economy</span>  <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)[</span><span class="s2">&quot;Economy (GDP per Capita)&quot;</span><span class="p">]</span>
+<span class="n">family</span>  <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)[</span><span class="s2">&quot;Family&quot;</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">health</span>  <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)[</span><span class="s2">&quot;Health (Life Expectancy)&quot;</span><span class="p">]</span>
+<span class="n">freedom</span>  <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)[</span><span class="s2">&quot;Freedom&quot;</span><span class="p">]</span>
+<span class="n">trust</span>  <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)[</span><span class="s2">&quot;Trust (Government Corruption)&quot;</span><span class="p">]</span>
+<span class="n">dystopia</span>  <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)[</span><span class="s2">&quot;Dystopia Residual&quot;</span><span class="p">]</span><span class="o">/</span><span class="mi">10</span>
+<span class="n">rank</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)[</span><span class="s2">&quot;Happiness Rank&quot;</span><span class="p">]</span> 
+<span class="n">score</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)[</span><span class="s2">&quot;Happiness Score&quot;</span><span class="p">]</span><span class="o">/</span><span class="mi">10</span>
+
+<span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Happiness Score/10&quot;</span><span class="p">,</span><span class="s2">&quot;Generosity&quot;</span><span class="p">,</span> <span class="s2">&quot;Economy (GDP per Capita)&quot;</span><span class="p">,</span> <span class="s2">&quot;Family&quot;</span><span class="p">,</span><span class="s2">&quot;Health (Life Expectancy)&quot;</span><span class="p">,</span><span class="s2">&quot;Freedom&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;Trust (Government Corruption)&quot;</span><span class="p">,</span><span class="s2">&quot;Dystopia Residual / 10&quot;</span><span class="p">]</span> 
+
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">year</span><span class="p">:</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatterpolar</span><span class="p">(</span>
+          <span class="n">r</span><span class="o">=</span><span class="p">[</span><span class="n">score</span><span class="p">[</span><span class="n">count</span><span class="p">],</span><span class="n">generosity</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">economy</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">family</span><span class="p">[</span><span class="n">count</span><span class="p">],</span><span class="n">health</span><span class="p">[</span><span class="n">count</span><span class="p">],</span><span class="n">freedom</span><span class="p">[</span><span class="n">count</span><span class="p">],</span><span class="n">trust</span><span class="p">[</span><span class="n">count</span><span class="p">],</span><span class="n">dystopia</span><span class="p">[</span><span class="n">count</span><span class="p">]],</span>
+          <span class="n">theta</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span>
+          <span class="n">name</span><span class="o">=</span><span class="n">i</span>
+    <span class="p">))</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Waarden van de variabelen van Afghanistan tijdens verschillende jaren&quot;</span><span class="p">,</span>
+    <span class="n">polar</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">radialaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">]</span>
+        <span class="p">)),</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">margin_b</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+    <span class="n">annotations</span> <span class="o">=</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">xref</span><span class="o">=</span><span class="s1">&#39;paper&#39;</span><span class="p">,</span>
+                        <span class="n">yref</span><span class="o">=</span><span class="s1">&#39;paper&#39;</span><span class="p">,</span>
+                        <span class="n">x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> 
+                        <span class="n">y</span><span class="o">=-</span><span class="mf">0.25</span><span class="p">,</span>
+                        <span class="n">showarrow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                        <span class="n">text</span> <span class="o">=</span><span class="s1">&#39;De as bij elke variabele laat de waarde zien per jaar. De waardes van sommige variabelen zijn gescaled voor betere visualisatie.&#39;</span><span class="p">)]</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="afd40403-f2d3-4b10-b86b-bfa7ec7a988c" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("afd40403-f2d3-4b10-b86b-bfa7ec7a988c")) {                    Plotly.newPlot(                        "afd40403-f2d3-4b10-b86b-bfa7ec7a988c",                        [{"name":"2015","r":[0.35750000000000004,0.3651,0.31982,0.151425,0.30335,0.23414,0.09719,0.19521],"theta":["Happiness Score\u002f10","Generosity","Economy (GDP per Capita)","Family","Health (Life Expectancy)","Freedom","Trust (Government Corruption)","Dystopia Residual \u002f 10"],"type":"scatterpolar"},{"name":"2016","r":[0.33599999999999997,0.31268,0.38227,0.055185,0.17344,0.1643,0.07112,0.21455799999999997],"theta":["Happiness Score\u002f10","Generosity","Economy (GDP per Capita)","Family","Health (Life Expectancy)","Freedom","Trust (Government Corruption)","Dystopia Residual \u002f 10"],"type":"scatterpolar"},{"name":"2017","r":[0.37939999103546096,0.311870932579041,0.401477217674255,0.2907716631889345,0.180746778845787,0.106179520487785,0.0611578300595284,0.215080118179321],"theta":["Happiness Score\u002f10","Generosity","Economy (GDP per Capita)","Family","Health (Life Expectancy)","Freedom","Trust (Government Corruption)","Dystopia Residual \u002f 10"],"type":"scatterpolar"},{"name":"2018","r":[0.3632,0.191,0.332,0.2685,0.255,0.085,0.036,0.20828270605977367],"theta":["Happiness Score\u002f10","Generosity","Economy (GDP per Capita)","Family","Health (Life Expectancy)","Freedom","Trust (Government Corruption)","Dystopia Residual \u002f 10"],"type":"scatterpolar"},{"name":"2019","r":[0.3203,0.158,0.35,0.2585,0.361,0.0,0.025,0.20828270605977367],"theta":["Happiness Score\u002f10","Generosity","Economy (GDP per Capita)","Family","Health (Life Expectancy)","Freedom","Trust (Government Corruption)","Dystopia Residual \u002f 10"],"type":"scatterpolar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"polar":{"radialaxis":{"visible":true,"range":[0,0.45]}},"margin":{"b":90},"title":{"text":"Waarden van de variabelen van Afghanistan tijdens verschillende jaren"},"showlegend":true,"annotations":[{"showarrow":false,"text":"De as bij elke variabele laat de waarde zien per jaar. De waardes van sommige variabelen zijn gescaled voor betere visualisatie.","x":0.5,"xref":"paper","y":-0.25,"yref":"paper"}]},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('afd40403-f2d3-4b10-b86b-bfa7ec7a988c');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+</section>
+<section id="relatieve-verandering-trust-sketch">
+<h2>Relatieve verandering Trust (Sketch)<a class="headerlink" href="#relatieve-verandering-trust-sketch" title="Permalink to this heading">#</a></h2>
+<p>In de onderstaande figuur zijn er twee pie plots. De eerste pie plot laat de wereldwijde score van de Trust variabele per jaar zien, hieruit kan afgelezen worden wat de relatieve verandering van de Trust variabele per jaar is. In de tweede pie plot wordt de wereldwijde Happiness Score per jaar laten zien, hieruit kan afgelezen worden wat de relatieve verandering van de Happiness Score per jaar is. Als de twee pie plots met elkaar vergeleken worden, dan valt er een interessant patroon te zien, als de score van de Trust variabele afneemt, dan neemt de Happiness Score ook af. Dus er is een verband tussen de Trust variabele en de Happiness Score.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig2</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">,</span>
+    <span class="n">names</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span>
+    <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Trust (Government Corruption)&#39;</span>
+<span class="p">)</span>
+
+<span class="n">fig2</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;De wereldwijde score van de Trust variabele per jaar&quot;</span><span class="p">,</span>
+    <span class="n">annotations</span><span class="o">=</span><span class="p">[</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=-</span><span class="mf">0.2</span><span class="p">,</span>
+        <span class="n">showarrow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">text</span><span class="o">=</span><span class="s2">&quot;In deze pie plot is er voor de jaren in de periode 2015-2019 de score van de Trust variabele van elk land bij elkaar opgeteld.&lt;br&gt; Hiermee kan er een wereldwijde beeld geschetst worden hoe betrouwbaar de regering is en hoe dit per jaar verandert.&quot;</span><span class="p">,</span>
+        <span class="n">xref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span>
+        <span class="n">yref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span>
+        <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+
+
+
+<span class="n">fig3</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">,</span>
+    <span class="n">names</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span>
+    <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Happiness Score&#39;</span>
+<span class="p">)</span>
+
+<span class="n">fig3</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;De wereldwijde score van de Happiness Score per jaar&quot;</span><span class="p">,</span>
+    <span class="n">annotations</span><span class="o">=</span><span class="p">[</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=-</span><span class="mf">0.2</span><span class="p">,</span>
+        <span class="n">showarrow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">text</span><span class="o">=</span><span class="s2">&quot;In deze pie plot is er voor de jaren in de periode 2015-2019 de Happiness Score van elk land bij elkaar opgeteld.&lt;br&gt; Hiermee kan er een wereldwijde beeld geschetst worden hoe blij mensen zijn en hoe dit per jaar verandert. &lt;br&gt; Door de eerste pie plot met deze pie plot te vergelijken, kan er bekeken worden of er een verband is tussen de relatieve verandering van de Trust variabele met de relatieve verandering van de Happiness Score.&quot;</span><span class="p">,</span>
+        <span class="n">xref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span>
+        <span class="n">yref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span>
+        <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+
+
+<span class="n">fig2</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">fig3</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="1659b00d-199f-4c1b-b838-ff99bce41fe7" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("1659b00d-199f-4c1b-b838-ff99bce41fe7")) {                    Plotly.newPlot(                        "1659b00d-199f-4c1b-b838-ff99bce41fe7",                        [{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"Year=%{label}\u003cbr\u003eTrust (Government Corruption)=%{value}\u003cextra\u003e\u003c\u002fextra\u003e","labels":[2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2016,2017,2018,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2018,2019,2017,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2017,2018,2019,2015,2016,2017,2018,2019,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2019,2018,2019,2015,2016,2017,2018,2019,2015,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2016,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2016,2017,2018,2019,2016,2015,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2015,2016,2015,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2018,2019,2017,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2018,2019,2015,2016,2017,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019],"legendgroup":"","name":"","showlegend":true,"values":[0.09719,0.07112,0.0611578300595284,0.036,0.025,0.06413,0.05301,0.0398642159998417,0.032,0.027,0.17383,0.16157,0.146096110343933,0.135,0.114,0.07122,0.08434,0.0697203353047371,0.061,0.08484,0.07296,0.059739887714386,0.054,0.05,0.039,0.03616,0.0266744215041399,0.028,0.064,0.35637,0.32331,0.301183730363846,0.302,0.29,0.18676,0.21348,0.221060365438461,0.224,0.226,0.16065,0.17914,0.180987507104874,0.176,0.182,0.306,0.25772,0.257042169570923,0.123,0.11,0.12569,0.12583,0.123717859387398,0.144,0.143,0.1909,0.17457,0.156313821673393,0.154,0.142,0.2254,0.26248,0.251343131065369,0.24,0.21,0.10771,0.0965810716152191,0.089,0.0801,0.06681,0.0609290152788162,0.067,0.082,0.15445,0.1616,0.173380389809608,0.171,0.167,0.088,0.07746,0.0604777261614799,0.054,0.064,0.00227,0.0,0.0,0.0,0.006,0.12474,0.10769,0.0985831990838051,0.092,0.1,0.17521,0.14166,0.111092761158943,0.088,0.086,0.00872,0.00615,0.0110515309497714,0.009,0.004,0.12832,0.12533,0.120328105986118,0.128,0.113,0.10062,0.09419,0.0841479450464249,0.076,0.18,0.07247,0.08092,0.0681059509515762,0.065,0.062,0.05786,0.06126,0.0513066314160824,0.043,0.037,0.32957,0.31329,0.287371516227722,0.291,0.308,0.08289,0.0565650761127472,0.038,0.035,0.05269,0.04952,0.0535818822681904,0.06,0.078,0.12869,0.11451,0.0822879821062088,0.061,0.056,0.02781,0.02745,0.0227942746132612,0.103,0.1,0.0512,0.05399,0.0466687418520451,0.039,0.034,0.199,0.18437,0.078,0.11686,0.09753,0.0796181336045265,0.077,0.093,0.07625,0.06075,0.0602413564920425,0.052,0.053,0.10583,0.10547,0.100106589496136,0.101,0.093,0.0243,0.04002,0.0431031100451946,0.039,0.022,0.06146,0.05228,0.0412379764020443,0.035,0.041,0.02652,0.03986,0.0368729270994663,0.034,0.036,0.48357,0.44453,0.40077006816864,0.408,0.41,0.28105,0.14234,0.12372,0.113945253193378,0.106,0.101,0.1809,0.18037,0.140134647488594,0.12,0.087,0.06324,0.10393,0.114381365478039,0.107,0.067,0.11776,0.10613,0.0899809598922729,0.082,0.074,0.15184,0.18519,0.183248922228813,0.174,0.161,0.15048,0.1717,0.165455713868141,0.146,0.1,0.41372,0.41004,0.38261154294014,0.393,0.393,0.20646,0.17808,0.172502428293228,0.176,0.183,0.11091,0.09314,0.0760467872023582,0.052,0.055,0.167,0.38331,0.3188,0.251666635274887,0.215,0.164,0.21843,0.28551,0.276731938123703,0.28,0.265,0.04355,0.0326,0.0253363698720932,0.029,0.04,0.01397,0.04127,0.04328977689147,0.044,0.034,0.09472,0.08701,0.0772232785820961,0.071,0.078,0.12139,0.1192,0.110937617719173,0.094,0.086,0.17175,0.14476,0.0998721495270729,0.104,0.11,0.06825,0.06906,0.0733454525470734,0.074,0.078,0.37124,0.31647,0.291,0.287,0.293933749198914,0.02758,0.04472,0.0366369374096394,0.022,0.02,0.14145,0.14975,0.153526559472084,0.138,0.118,0.08492,0.08722,0.0922268852591515,0.093,0.085,0.0,0.00322,0.0153171354904771,0.018,0.028,0.05863,0.0557,0.048761073499918,0.129,0.125,0.13788,0.13636,0.107215754687786,0.095,0.089,0.28703,0.29754,0.29838815331459,0.306,0.31,0.07785,0.08728,0.0852421000599861,0.272,0.082,0.02901,0.02556,0.0280280914157629,0.028,0.03,0.17922,0.1553,0.130061775445938,0.103,0.09,0.02299,0.04294,0.0552677810192108,0.031,0.028,0.1806,0.18985,0.163760736584663,0.15,0.14,0.14293,0.13297,0.11980327218771,0.134,0.13,0.08454,0.11132,0.119282886385918,0.121,0.096,0.05839,0.06686,0.0646413192152977,0.055,0.053,0.04741,0.06547,0.0574716180562973,0.023,0.006,0.25609,0.23669,0.215159550309181,0.106,0.097,0.04232,0.04762,0.0394391790032387,0.035,0.023,0.24249,0.22423,0.174,0.164,0.06332,0.0889,0.0738427266478539,0.066,0.064,0.04582,0.03061,0.037513829767704,0.136,0.027,0.12504,0.119094640016556,0.112,0.093,0.06232,0.04852,0.0389482490718365,0.03,0.033,0.11023,0.10339,0.0926102101802826,0.148,0.152,0.01031,0.0182,0.0118656428530812,0.006,0.042,0.37798,0.35329,0.31883442401886,0.321,0.316,0.05327,0.07047,0.0602777935564518,0.052,0.08124,0.07506,0.0672319754958153,0.049,0.041,0.06977,0.07564,0.0727116540074348,0.08,0.089,0.10501,0.09081,0.0656007081270218,0.059,0.024,0.12352,0.13647,0.104970246553421,0.056,0.052,0.13586,0.17554,0.153066068887711,0.142,0.151,0.17461,0.17955,0.136957004666328,0.093,0.088,0.07521,0.05203,0.0421815551817417,0.05,0.06,0.21312,0.18355,0.132774114608765,0.095,0.073,0.01615,0.01903,0.0100912861526012,0.0,0.0,0.02666,0.03285,0.0329022891819477,0.032,0.038,0.14296,0.12721,0.0881741940975189,0.081,0.08,0.08546,0.08404,0.0877631828188896,0.074,0.076,0.15603,0.179436385631561,0.158,0.138,0.19034,0.20243,0.188816204667091,0.178,0.172,0.10398,0.0931469723582268,0.064,0.056,0.05907,0.07008,0.0729755461215973,0.078,0.089,0.31814,0.29927,0.282661825418472,0.295,0.298,0.42922,0.41904,0.382816702127457,0.389,0.38,0.19317,0.16292,0.130687981843948,0.128,0.127,0.15639,0.17176,0.138572946190834,0.099,0.102,0.0403,0.0305,0.0261215660721064,0.032,0.041,0.1428,0.16578,0.155353352427483,0.034,0.154,0.162,0.36503,0.35776,0.315963834524155,0.34,0.341,0.32524,0.10464,0.1388,0.124348066747189,0.113,0.098,0.12905,0.10613,0.0892826020717621,0.076,0.066,0.0927,0.08423,0.070983923971653,0.063,0.054,0.08242,0.07396,0.091065913438797,0.074,0.08,0.05989,0.05292,0.0470490865409374,0.034,0.027,0.12279,0.11757,0.0993318930268288,0.105,0.107,0.04212,0.055,0.0593078061938286,0.064,0.05,0.01078,0.01521,0.0158694516867399,0.017,0.025,0.12275,0.52208,0.48049,0.439299255609512,0.171,0.167,0.00649,0.00679,0.00438790069893,0.001,0.005,0.03005,0.03586,0.0329628810286522,0.025,0.031,0.55191,0.50521,0.455220013856888,0.444,0.411,0.32524,0.30008,0.27343225479126,0.127,0.132,0.10713,0.11681,0.115460447967052,0.082,0.072,0.02617,0.04339,0.0409037806093693,0.043,0.039,0.08786,0.08196,0.0710951760411263,0.053,0.045,0.4921,0.46987,0.46430778503418,0.457,0.453,0.03431,0.02947,0.0242108516395092,0.014,0.014,0.03787,0.03635,0.0451289787888527,0.051,0.057,0.3118,0.282410323619843,0.282,0.27,0.36794,0.39928,0.08884,0.08415,0.0725094974040985,0.056,0.055,0.07857,0.07716,0.0632826685905457,0.051,0.056,0.13015,0.116793513298035,0.106,0.091,0.06398,0.06137,0.0709140971302986,0.074,0.079,0.09179,0.07964,0.0736539661884308,0.05,0.047,0.1466,0.10039,0.089847519993782,0.082,0.13633,0.12692,0.0306,0.135,0.43844,0.40867,0.384398728609085,0.383,0.373,0.41978,0.41203,0.367007285356522,0.357,0.343,0.18906,0.17233,0.151347130537033,0.144,0.141,0.08129,0.0663,0.078,0.097,0.0638292357325554,0.15072,0.13509,0.146377146244049,0.034,0.144,0.05747,0.05099,0.0660351067781448,0.097,0.147,0.03187,0.02833,0.0316127352416515,0.029,0.028,0.10731,0.11587,0.0956650152802467,0.101,0.085,0.019,0.016,0.0114,0.01241,0.0089648161083459,0.06358,0.0817,0.0867231488227844,0.063,0.055,0.15746,0.12348,0.0996715798974037,0.109,0.106,0.30844,0.28467,0.259270340204239,0.037,0.028,0.07267,0.06442,0.057069718837738,0.061,0.06,0.02961,0.01829,0.0230294708162546,0.011,0.01,0.38583,0.35561,0.324489563703537,null,0.182,0.32067,0.27399,0.265428066253662,0.082,0.278,0.1589,0.14868,0.135638788342476,0.133,0.128,0.24558,0.21394,0.178061872720718,0.155,0.15,0.30826,0.28333,0.246528223156929,0.259,0.24,0.11069,0.08304,0.0644911229610443,0.052,0.047,0.10441,0.11556,0.0876332372426987,0.079,0.073,0.07854,0.05892,0.0567674227058887,0.064,0.077,0.12468,0.11479,0.0782135501503944,0.082,0.087,0.08079,0.08582,0.0953753814101219,0.099,0.089],"type":"pie"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"legend":{"tracegroupgap":0},"margin":{"t":60},"title":{"text":"De wereldwijde score van de Trust variabele per jaar"},"annotations":[{"font":{"size":10},"showarrow":false,"text":"In deze pie plot is er voor de jaren in de periode 2015-2019 de score van de Trust variabele van elk land bij elkaar opgeteld.\u003cbr\u003e Hiermee kan er een wereldwijde beeld geschetst worden hoe betrouwbaar de regering is en hoe dit per jaar verandert.","x":0.5,"xref":"paper","y":-0.2,"yref":"paper"}]},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('1659b00d-199f-4c1b-b838-ff99bce41fe7');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div><div class="output text_html"><div>                            <div id="c10ed73e-571e-4c61-984b-f0954b8ccefb" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("c10ed73e-571e-4c61-984b-f0954b8ccefb")) {                    Plotly.newPlot(                        "c10ed73e-571e-4c61-984b-f0954b8ccefb",                        [{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"Year=%{label}\u003cbr\u003eHappiness Score=%{value}\u003cextra\u003e\u003c\u002fextra\u003e","labels":[2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2016,2017,2018,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2018,2019,2017,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2017,2018,2019,2015,2016,2017,2018,2019,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2019,2018,2019,2015,2016,2017,2018,2019,2015,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2016,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2016,2017,2018,2019,2016,2015,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2015,2016,2015,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2018,2019,2017,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2018,2019,2015,2016,2017,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019,2015,2016,2017,2018,2019],"legendgroup":"","name":"","showlegend":true,"values":[3.575,3.36,3.79399991035461,3.632,3.203,4.959,4.655,4.64400005340576,4.586,4.719,5.605,6.355,5.87200021743774,5.295,5.211,4.033,3.866,3.79500007629395,3.795,6.574,6.65,6.59899997711182,6.388,6.086,4.35,4.36,4.37599992752075,4.321,4.559,7.284,7.313,7.28399991989136,7.272,7.228,7.2,7.119,7.00600004196167,7.139,7.246,5.212,5.291,5.23400020599365,5.201,5.208,5.96,6.218,6.08699989318848,6.105,6.199,4.694,4.643,4.60799980163574,4.5,4.456,5.813,5.802,5.56899976730347,5.483,5.323,6.937,6.929,6.89099979400635,6.927,6.923,5.956,5.95599985122681,5.956,3.34,3.484,3.65700006484985,4.141,4.883,5.253,5.196,5.01100015640259,5.082,5.082,5.89,5.822,5.82299995422363,5.752,5.779,4.949,5.163,5.18200016021729,5.129,5.386,4.332,3.974,3.76600003242493,3.59,3.488,6.983,6.952,6.63500022888184,6.419,6.3,4.218,4.217,4.71400022506714,4.933,5.011,3.587,3.739,4.03200006484985,4.424,4.587,2.905,2.905,2.90499997138977,2.905,3.775,3.819,3.907,4.16800022125244,4.433,4.7,4.252,4.513,4.69500017166138,4.975,5.044,7.427,7.404,7.31599998474121,7.328,7.278,3.678,2.69300007820129,3.083,3.083,3.667,3.763,3.93600010871887,4.301,4.35,6.67,6.705,6.65199995040894,6.476,6.444,5.14,5.245,5.27299976348877,5.246,5.191,6.477,6.481,6.35699987411499,6.26,6.125,3.956,3.956,3.973,3.989,4.236,4.29099988937378,4.559,4.812,4.517,4.272,4.28000020980835,4.245,4.418,7.226,7.087,7.0789999961853,7.072,7.167,5.759,5.488,5.29300022125244,5.321,5.432,5.689,5.546,5.62099981307983,5.762,6.046,6.505,6.596,6.60900020599365,6.711,6.852,7.527,7.526,7.52199983596802,7.555,7.6,4.369,4.885,5.155,5.23000001907349,5.302,5.425,5.975,5.976,6.00799989700317,5.973,6.028,4.194,4.362,4.7350001335144,4.419,4.166,6.13,6.068,6.00299978256226,6.167,6.253,5.429,5.517,5.61100006103516,5.739,5.893,4.512,4.508,4.46000003814697,4.35,4.286,7.406,7.413,7.4689998626709,7.632,7.769,6.575,6.478,6.44199991226196,6.489,6.592,3.896,4.121,4.46500015258789,4.758,4.799,4.516,4.297,4.252,4.28599977493286,4.34,4.519,6.75,6.994,6.95100021362305,6.965,6.985,4.633,4.276,4.11999988555908,4.657,4.996,4.857,5.033,5.22700023651123,5.358,5.287,6.123,6.324,6.4539999961853,6.382,6.436,3.656,3.607,3.50699996948242,3.964,4.534,4.518,4.028,3.6029999256134,3.582,3.597,4.788,4.871,5.18100023269653,5.504,5.86,5.474,5.458,5.43,5.43,5.47200012207031,4.8,5.145,5.32399988174438,5.62,5.758,7.561,7.501,7.50400018692017,7.495,7.494,4.565,4.404,4.31500005722046,4.19,4.015,5.399,5.314,5.26200008392334,5.093,5.192,4.686,4.813,4.69199991226196,4.707,4.548,4.677,4.575,4.49700021743774,4.456,4.437,6.94,6.907,6.97700023651123,6.977,7.021,7.278,7.267,7.21299982070923,6.814,7.139,5.948,5.977,5.96400022506714,6.0,6.223,3.655,3.916,4.17999982833862,4.671,4.944,5.709,5.51,5.31099987030029,5.89,5.89,5.987,5.921,5.92000007629395,5.915,5.886,5.192,5.303,5.33599996566772,5.161,4.906,5.855,5.919,5.81899976730347,5.79,5.809,4.419,4.356,4.55299997329712,4.41,4.509,5.589,5.401,5.27899980545044,5.662,6.1,6.295,6.239,6.10500001907349,6.083,6.021,5.286,5.185,5.00400018692017,5.131,5.261,4.876,4.876,4.623,4.796,5.098,5.56,5.84999990463257,5.933,5.94,4.839,5.129,5.22499990463257,5.358,5.197,4.898,3.80800008773804,3.808,3.802,4.571,3.622,3.53299999237061,3.495,3.975,5.754,5.615,5.52500009536743,5.566,5.525,5.833,5.813,5.90199995040894,5.952,6.149,6.946,6.871,6.86299991607666,6.91,7.09,5.007,5.121,5.17500019073486,5.185,3.681,3.695,3.64400005340576,3.774,3.933,4.292,4.156,3.97000002861023,3.587,3.41,5.77,6.005,6.08400011062622,6.322,5.339,3.995,4.073,4.19000005722046,4.447,4.39,6.302,6.488,6.52699995040894,6.627,6.726,4.436,4.201,4.29199981689453,4.356,4.49,5.477,5.648,5.62900018692017,5.891,5.888,7.187,6.778,6.57800006866455,6.488,6.595,5.889,5.897,5.83799982070923,5.64,5.529,4.874,4.907,4.95499992370605,5.125,5.285,5.192,5.161,5.23699998855591,5.347,5.523,5.013,5.151,5.2350001335144,5.254,5.208,4.971,4.55000019073486,4.417,4.466,4.307,4.395,4.54500007629395,4.308,4.36,4.574,4.57399988174438,4.441,4.639,4.514,4.793,4.96199989318848,4.88,4.913,7.378,7.339,7.3769998550415,7.441,7.488,7.286,7.334,7.31400012969971,7.324,7.307,5.828,5.992,6.07100009918213,6.141,6.105,3.845,3.856,4.02799987792969,4.166,4.628,5.268,4.875,5.07399988174438,5.155,5.265,5.695,5.771,5.80999994277954,5.274,5.835,5.718,7.522,7.498,7.53700017929077,7.594,7.554,6.853,5.194,5.132,5.26900005340576,5.472,5.653,4.715,4.754,4.77500009536743,4.743,4.696,6.786,6.701,6.4520001411438,6.43,6.321,5.878,5.538,5.49300003051758,5.681,5.743,5.824,5.743,5.71500015258789,5.663,5.697,5.073,5.279,5.42999982833862,5.524,5.631,5.791,5.835,5.97300004959106,6.123,6.182,5.102,5.123,5.19500017166138,5.41,5.693,7.039,6.611,6.375,6.375,6.374,6.374,5.124,5.528,5.82499980926514,5.945,6.07,5.716,5.856,5.96299982070923,5.81,5.648,3.465,3.515,3.47099995613098,3.408,3.334,6.411,6.379,6.3439998626709,6.371,6.375,3.904,4.219,4.53499984741211,4.631,4.681,5.123,5.177,5.39499998092651,5.398,5.603,4.507,4.635,4.70900011062622,4.571,4.374,6.798,6.739,6.57200002670288,6.343,6.262,5.995,6.078,6.09800004959106,6.173,6.198,5.848,5.768,5.75799989700317,5.948,6.118,5.44,5.15100002288818,4.982,4.668,5.057,5.057,4.642,4.459,4.8289999961853,4.724,4.722,5.984,5.835,5.83799982070923,5.875,5.895,3.832,3.59100008010864,3.254,2.853,6.329,6.361,6.40299987792969,6.31,6.354,4.271,4.415,4.44000005722046,4.471,4.366,4.55,4.139,4.13899993896484,4.139,6.269,6.269,4.867,4.212,7.364,7.291,7.28399991989136,7.314,7.343,7.587,7.509,7.49399995803833,7.487,7.48,3.006,3.069,3.46199989318848,3.462,3.462,6.298,6.379,6.441,6.446,6.42199993133545,4.786,4.996,5.04099988937378,5.199,5.467,3.781,3.666,3.34899997711182,3.303,3.231,6.455,6.474,6.42399978637695,6.072,6.008,2.839,3.303,3.49499988555908,3.999,4.085,6.192,6.192,6.168,6.168,6.16800022125244,4.739,5.045,4.80499982833862,4.592,4.461,5.332,5.389,5.5,5.483,5.373,5.548,5.658,5.82200002670288,5.636,5.247,3.931,3.739,4.08099985122681,4.161,4.189,4.681,4.324,4.09600019454956,4.103,4.332,6.901,6.573,6.64799976348877,6.774,6.825,6.867,6.725,6.71400022506714,7.19,7.054,7.119,7.104,6.99300003051758,6.886,6.892,6.485,6.545,6.4539999961853,6.379,6.293,6.003,5.987,5.97100019454956,6.096,6.174,6.81,6.084,5.25,4.806,4.707,5.36,5.061,5.07399988174438,5.103,5.175,4.077,3.724,3.59299993515015,3.355,3.38,5.129,4.795,4.51399993896484,4.377,4.107,4.61,4.193,3.875,3.692,3.663],"type":"pie"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"legend":{"tracegroupgap":0},"margin":{"t":60},"title":{"text":"De wereldwijde score van de Happiness Score per jaar"},"annotations":[{"font":{"size":10},"showarrow":false,"text":"In deze pie plot is er voor de jaren in de periode 2015-2019 de Happiness Score van elk land bij elkaar opgeteld.\u003cbr\u003e Hiermee kan er een wereldwijde beeld geschetst worden hoe blij mensen zijn en hoe dit per jaar verandert. \u003cbr\u003e Door de eerste pie plot met deze pie plot te vergelijken, kan er bekeken worden of er een verband is tussen de relatieve verandering van de Trust variabele met de relatieve verandering van de Happiness Score.","x":0.5,"xref":"paper","y":-0.2,"yref":"paper"}]},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('c10ed73e-571e-4c61-984b-f0954b8ccefb');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introductie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-en-preprocessing">Dataset en preprocessing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invloed-van-gezondheid-en-economie-op-de-happiness-score">Invloed van gezondheid en economie op de Happiness Score</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relatieve-verandering-gezondheid">Relatieve verandering gezondheid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relatieve-veranderingen-van-afghanistan">Relatieve veranderingen van Afghanistan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relatieve-verandering-trust-sketch">Relatieve verandering Trust (Sketch)</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yen-Chia Hsu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
